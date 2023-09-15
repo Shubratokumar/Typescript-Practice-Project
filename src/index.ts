@@ -1,17 +1,28 @@
 // Creating an object with class constructor
+// class User {
+//     // anything not defined with private keyword are public
+//     public email: string
+//     name: string
+//     // not accessible use private keyword
+//     private readonly city: string = "Paris"
+//     constructor(name: string, email: string) {
+//         this.name = name;
+//         this.email = email;
+//     }
+// }
+
+// writing classes in professional way
 class User {
-    email: string
-    name: string
     readonly city: string = "Paris"
-    constructor(name: string, email: string) {
-        this.name = name;
-        this.email = email;
+    constructor(
+        public name: string,
+        public email: string,
+        private userId: string
+    ) {
     }
 }
 
-const shubrato = new User("shubrato", "shubrato@gmail.com" );
-// shubrato.city = "Dhaka";
-console.log(shubrato);
+const shubrato = new User("shubrato", "shubrato@gmail.com", "9534");
 
 
 
