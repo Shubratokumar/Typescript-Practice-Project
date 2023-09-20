@@ -13,7 +13,9 @@
 
 // writing classes in professional way
 class User {
-    private _courseCount = 1
+    // when we mention private then this properties will accessible within the classes
+    // private _courseCount = 1
+    protected _courseCount = 1
     readonly city: string = "Paris"
     constructor(
         public name: string,
@@ -21,7 +23,7 @@ class User {
         private userId: string
     ) {
     }
-    // private methods
+    // private methods [access modifier]
     private deleteToken(){
         console.log("Token deleted");        
     }
@@ -45,7 +47,20 @@ class User {
     }
 }
 
+class SubUser extends User {
+    // here SubUser will get all properties of User except the private properties
+    isFamily:boolean = true;
+    changeCourseCount(){
+        this._courseCount = 5;
+    }
+
+}
+
 const shubrato = new User("shubrato", "shubrato@gmail.com", "9534");
+
+// shubrato.name
+// shubrato.deleteToken()
+// access modifiers : public[anywhere accessible], private[accessible within the class] and protected[accessible within the class as well as any classes extends that class].
 
 
 
