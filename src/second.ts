@@ -25,7 +25,6 @@ class FaceBook implements TakePhoto, Story {
         public reels: string
     ){}
     createStory(): void {
-        console.log("Creating Story");
-        
+        console.log("Creating Story");        
     }
 }
