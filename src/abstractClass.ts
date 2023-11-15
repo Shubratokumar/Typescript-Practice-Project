@@ -25,5 +25,9 @@ class Instagram1 extends TakePhoto {
     }
 }
 
+// we cannot create an instance of an abstract class
+// const sk1 = new TakePhoto();
+
+// we can do so with extends class of the abstract class
 const sk = new Instagram1("test", "test", 7);
 
